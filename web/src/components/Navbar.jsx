@@ -1,9 +1,10 @@
-﻿import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import RollingText from './RollingText'
 import { useTheme } from '../context/ThemeContext'
 import { useLanguage } from '../context/LanguageContext'
+import { siteConfig } from '../config/siteConfig'
 
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -279,8 +280,13 @@ const Navbar = ({ isLoaded }) => {
           className="flex items-center justify-between bg-white/92 rounded-[2rem] md:rounded-full px-4 md:px-7 !py-2.5 border border-slate-200/90 shadow-[0_4px_30px_rgba(33,113,181,0.12)] backdrop-blur-2xl relative z-20 will-change-[padding,background-color]"
         >
 
-          <Link to="/" ref={logoRef} className="flex items-center hover:opacity-80 transition-opacity gap-2.5">
-            <img src="/logos/osa_logo.png" alt="Happy Life Logo" className="h-9 md:h-11 w-auto object-contain" />
+          <Link to="/" ref={logoRef} className="flex items-center hover:opacity-90 transition-opacity gap-2.5">
+            <div className="w-8 h-8 rounded-lg bg-accent flex items-center justify-center text-white font-black text-sm shadow-md">
+              {siteConfig.brandName.charAt(0)}
+            </div>
+            <span className="font-montserrat text-sm md:text-base font-extrabold text-slate-900 tracking-tight">
+              {siteConfig.brandName}
+            </span>
           </Link>
 
           <div
@@ -344,8 +350,13 @@ const Navbar = ({ isLoaded }) => {
 
           {/* Internal Menu Header */}
           <header className="menu-header absolute top-0 left-0 w-full px-8 md:px-12 py-8 md:py-10 flex items-center justify-between z-50">
-            <Link to="/" onClick={toggleMenu} className="flex items-center gap-3 hover:opacity-80 transition-opacity">
-              <img src="/logos/osa_logo.png" alt="Happy Life Logo" className="h-10 md:h-12 w-auto object-contain" />
+            <Link to="/" onClick={toggleMenu} className="flex items-center gap-2.5 hover:opacity-80 transition-opacity">
+              <div className="w-10 h-10 rounded-xl bg-accent flex items-center justify-center text-white font-black text-lg shadow-md">
+                {siteConfig.brandName.charAt(0)}
+              </div>
+              <span className="font-montserrat text-lg font-black text-slate-900 tracking-tight">
+                {siteConfig.brandName}
+              </span>
             </Link>
 
             <button

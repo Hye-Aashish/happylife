@@ -6,30 +6,30 @@ import { useLanguage } from '../context/LanguageContext'
 
 const DEFAULT_SELECTIONS = [
   {
-    id: 'astro_vastu',
-    title: 'Astro-Vastu Mastery',
-    subtitle: 'Harmonize Your Home & Destiny',
+    id: 'system_architecture',
+    title: 'Cloud Architecture & DevOps',
+    subtitle: 'Master Enterprise Cloud, Kubernetes & Infrastructure',
     image: '/courses/architecture.png',
     type: 'all_courses'
   },
   {
-    id: 'kundli_analysis',
-    title: 'Vedic Kundli & Remedies',
-    subtitle: 'Practical Solutions for Modern Challenges',
+    id: 'fullstack_engineering',
+    title: 'Full-Stack & Distributed Systems',
+    subtitle: 'Build High-Scale Reactive & Intelligent Platforms',
     image: '/courses/motion.png',
     type: 'all_courses'
   },
   {
-    id: 'numerology_guidance',
-    title: 'Numerology & Name Alignment',
-    subtitle: 'Unlock The Power of Numbers',
+    id: 'data_ai_systems',
+    title: 'AI Systems & Data Pipelines',
+    subtitle: 'Machine Learning Models, Streaming & Analytics',
     image: '/courses/typography.png',
     type: 'all_courses'
   },
   {
-    id: 'career_finance_astrology',
-    title: 'Career & Financial Astrology',
-    subtitle: 'Overcome Obstacles with Logical Upay',
+    id: 'cybersecurity_defense',
+    title: 'Cybersecurity & Zero-Trust Defense',
+    subtitle: 'Enterprise Security, Compliance & Threat Analysis',
     image: '/courses/curator.png',
     type: 'all_courses'
   }

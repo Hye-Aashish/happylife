@@ -1,7 +1,8 @@
-﻿import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useLanguage } from '../context/LanguageContext'
+import { siteConfig } from '../config/siteConfig'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -12,8 +13,8 @@ const BrandFeatures = () => {
   const features = [
     {
       tag: "Focus 01",
-      title: t('focus01Title'),
-      desc: t('focus01Desc'),
+      title: siteConfig.features[0]?.title || "Accredited Curriculum",
+      desc: siteConfig.features[0]?.description || "Structured learning paths designed by senior engineers from leading enterprise tech companies.",
       visual: (
         <div className="relative w-full h-full flex items-center justify-center p-8">
           {/* Node Graph Visual */}
@@ -41,8 +42,8 @@ const BrandFeatures = () => {
     },
     {
       tag: "Focus 02",
-      title: t('focus02Title'),
-      desc: t('focus02Desc'),
+      title: siteConfig.features[1]?.title || "High-Performance Video Labs",
+      desc: siteConfig.features[1]?.description || "Stream seamless video lessons with chapter navigation, note-taking, and progress sync.",
       visual: (
         <div className="relative w-full h-full flex flex-col items-center justify-center gap-4 p-8">
           {/* Frequency Wave Visual */}
@@ -58,10 +59,10 @@ const BrandFeatures = () => {
              ))}
           </div>
           <div className="bg-dark/80 backdrop-blur-md border border-white/10 px-6 py-4 flex flex-col items-center gap-2">
-             <span className="font-montserrat text-[8px] text-accent tracking-[0.4em] uppercase">Quality Check</span>
+             <span className="font-montserrat text-[8px] text-accent tracking-[0.4em] uppercase">Status</span>
              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse" />
-                <span className="font-montserrat text-[9px] text-normal tracking-widest font-black">STABLE / AUTHENTIC</span>
+                <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse" />
+                <span className="font-montserrat text-[9px] text-normal tracking-widest font-black">ADAPTIVE STREAMING / HD</span>
              </div>
           </div>
         </div>
@@ -69,35 +70,35 @@ const BrandFeatures = () => {
     },
     {
       tag: "Focus 03",
-      title: t('focus03Title'),
-      desc: t('focus03Desc'),
+      title: siteConfig.features[2]?.title || "Verifiable Digital Credentials",
+      desc: siteConfig.features[2]?.description || "Receive accredited cryptographic certificates upon passing evaluations to showcase on LinkedIn.",
       visual: (
         <div className="relative w-full h-full p-8 flex flex-col justify-end gap-6">
           {/* Mini Dashboard HUD */}
           <div className="grid grid-cols-2 gap-4">
              <div className="border border-white/10 p-4 bg-white/[0.02] space-y-3">
                 <div className="flex justify-between items-center">
-                   <span className="font-montserrat text-[8px] text-description uppercase">Margin</span>
-                   <span className="font-montserrat text-[8px] text-accent">82%</span>
+                   <span className="font-montserrat text-[8px] text-description uppercase">Exam Pass Rate</span>
+                   <span className="font-montserrat text-[8px] text-accent">96.8%</span>
                 </div>
                 <div className="h-1 bg-white/5 relative overflow-hidden">
-                   <div className="absolute top-0 left-0 h-full bg-accent w-[82%]" />
+                   <div className="absolute top-0 left-0 h-full bg-accent w-[96%]" />
                 </div>
              </div>
              <div className="border border-white/10 p-4 bg-white/[0.02] space-y-3">
                 <div className="flex justify-between items-center">
-                   <span className="font-montserrat text-[8px] text-description uppercase">ROAS</span>
-                   <span className="font-montserrat text-[8px] text-accent">12.1X</span>
+                   <span className="font-montserrat text-[8px] text-description uppercase">Satisfaction</span>
+                   <span className="font-montserrat text-[8px] text-accent">4.9/5.0</span>
                 </div>
                 <div className="h-1 bg-white/5 relative overflow-hidden">
-                   <div className="absolute top-0 left-0 h-full bg-accent w-[90%]" />
+                   <div className="absolute top-0 left-0 h-full bg-accent w-[98%]" />
                 </div>
              </div>
           </div>
           <div className="border border-accent/20 bg-accent/[0.03] p-6 flex items-center justify-between">
              <div className="space-y-1">
-                <p className="font-montserrat text-xl text-normal leading-none">$2.4k</p>
-                <p className="font-montserrat text-[7px] text-description tracking-widest uppercase">Target / Daily</p>
+                <p className="font-montserrat text-xl text-normal leading-none">Verified</p>
+                <p className="font-montserrat text-[7px] text-description tracking-widest uppercase">Tamper-Proof ID</p>
              </div>
              <div className="w-12 h-12 border border-accent/40 rounded-full flex items-center justify-center">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8B5CF6" strokeWidth="2"><path d="M23 6l-9.5 9.5-5-5L1 18"/><path d="M17 6h6v6"/></svg>
@@ -108,20 +109,20 @@ const BrandFeatures = () => {
     },
     {
       tag: "Focus 04",
-      title: t('focus04Title'),
-      desc: t('focus04Desc'),
+      title: siteConfig.features[3]?.title || "Global Peer & Mentor Community",
+      desc: siteConfig.features[3]?.description || "Collaborate with fellow students, participate in code reviews, and get live mentor guidance.",
       visual: (
         <div className="relative w-full h-full flex items-center justify-center p-12">
           {/* Pyramidal Layer Visual */}
           <div className="relative w-full aspect-square flex flex-col items-center justify-center gap-2">
              <div className="w-[40%] aspect-[3/1] bg-accent/40 border border-accent/60 flex items-center justify-center">
-                <span className="font-montserrat text-[7px] text-dark font-black tracking-widest">PREMIUM</span>
+                <span className="font-montserrat text-[7px] text-dark font-black tracking-widest">MENTORS</span>
              </div>
              <div className="w-[70%] aspect-[4/1] bg-white/[0.05] border border-white/10 flex items-center justify-center">
-                <span className="font-montserrat text-[7px] text-description tracking-widest">MID-TIER</span>
+                <span className="font-montserrat text-[7px] text-description tracking-widest">PEER GROUPS</span>
              </div>
              <div className="w-[100%] aspect-[5/1] bg-white/[0.02] border border-white/5 flex items-center justify-center">
-                <span className="font-montserrat text-[7px] text-description/80 tracking-widest uppercase">Foundation / Entry</span>
+                <span className="font-montserrat text-[7px] text-description/80 tracking-widest uppercase">DISCUSSIONS & FORUMS</span>
              </div>
              {/* Connecting Line */}
              <div className="absolute left-1/2 -ml-[1px] top-0 bottom-0 w-[2px] bg-gradient-to-b from-accent to-transparent z-[-1] opacity-20" />
@@ -167,9 +168,9 @@ const BrandFeatures = () => {
         {/* Header Segment */}
         <div className="features-header text-center space-y-8 mx-auto">
            <div className="space-y-4">
-              <span className="font-montserrat text-[9px] text-amber-700 tracking-[0.8em] font-black uppercase">{t('howWeHelp')}</span>
+              <span className="font-montserrat text-[10px] text-accent tracking-[0.6em] font-black uppercase">PLATFORM ARCHITECTURE • CORE MODULES</span>
               <h2 className="font-montserrat text-normal mb-8 text-3xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.15] transition-colors">
-                 {t('designedToGrow')}
+                 Engineered For Rapid Mastery & Proven Career Growth
               </h2>
            </div>
         </div>

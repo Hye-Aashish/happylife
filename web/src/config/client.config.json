@@ -1,0 +1,43 @@
+{
+  "brand": {
+    "name": "Zenith AI Academy",
+    "slug": "zenith-academy",
+    "tagline": "Enterprise Cloud & Software Engineering LMS",
+    "headline": "Master Modern Engineering & Cloud Systems",
+    "subheadline": "Hands-on coding sandboxes, interactive video lectures, self-paced evaluations, and globally verified credentials recognized by tier-1 tech companies.",
+    "colors": {
+      "primary": "#4f46e5",
+      "secondary": "#06b6d4",
+      "accent": "#f59e0b",
+      "background": "#0f172a"
+    },
+    "features": [
+      {
+        "id": "f1",
+        "title": "Industry-Accredited Curriculum",
+        "description": "Structured learning paths designed by senior engineers from leading enterprise tech companies."
+      },
+      {
+        "id": "f2",
+        "title": "Interactive Video Player",
+        "description": "Adaptive HD streaming with real-time code note-taking, speed controls, and lesson bookmarks."
+      },
+      {
+        "id": "f3",
+        "title": "Verifiable Digital Credentials",
+        "description": "Earn cryptographic certificates with unique verification IDs to showcase on LinkedIn and resumes."
+      },
+      {
+        "id": "f4",
+        "title": "Collaborative Learner Community",
+        "description": "Peer networking, live code review discussions, and 1-on-1 mentor office hours."
+      }
+    ],
+    "stats": [
+      { "label": "Enrolled Engineers", "value": "24,000+" },
+      { "label": "Average Rating", "value": "4.9 ★★★★★" },
+      { "label": "Course Completion", "value": "98.2%" },
+      { "label": "Verified Certs Issued", "value": "15,800+" }
+    ]
+  }
+}
